@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733E9DA72C5FFD870020E153 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */; };
 		73A5AB132C5D4E63009BAE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */; };
 		73A5AB152C5D4E63009BAE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */; };
 		73A5AB172C5D4E63009BAE4E /* BottomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB162C5D4E63009BAE4E /* BottomTabBarViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		73A5AB0F2C5D4E63009BAE4E /* StreamLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		733E9DA12C5FFD060020E153 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		733E9DA22C5FFD0C0020E153 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		733E9DA32C5FFD170020E153 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		733E9DA42C5FFD3D0020E153 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		733E9DA52C5FFD510020E153 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		73A5AB062C5D4E63009BAE4E = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +100,11 @@
 		73A5AB112C5D4E63009BAE4E /* StreamLand */ = {
 			isa = PBXGroup;
 			children = (
+				733E9DA52C5FFD510020E153 /* Managers */,
+				733E9DA42C5FFD3D0020E153 /* Resources */,
+				733E9DA32C5FFD170020E153 /* Models */,
+				733E9DA12C5FFD060020E153 /* Views */,
+				733E9DA22C5FFD0C0020E153 /* ViewModels */,
 				73A5AB262C5D5375009BAE4E /* Controllers */,
 				73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */,
 				73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */,
@@ -157,6 +200,7 @@
 			files = (
 				73A5AB2C2C5D54E8009BAE4E /* SearchViewController.swift in Sources */,
 				73A5AB172C5D4E63009BAE4E /* BottomTabBarViewController.swift in Sources */,
+				733E9DA72C5FFD870020E153 /* CollectionViewTableViewCell.swift in Sources */,
 				73A5AB2E2C5D551E009BAE4E /* DownloadsViewController.swift in Sources */,
 				73A5AB132C5D4E63009BAE4E /* AppDelegate.swift in Sources */,
 				73A5AB152C5D4E63009BAE4E /* SceneDelegate.swift in Sources */,
