@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		733E9DA72C5FFD870020E153 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */; };
+		7343B0902C6A218D00358B25 /* HomeHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343B08F2C6A218D00358B25 /* HomeHeaderUIView.swift */; };
 		73A5AB132C5D4E63009BAE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */; };
 		73A5AB152C5D4E63009BAE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */; };
 		73A5AB172C5D4E63009BAE4E /* BottomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB162C5D4E63009BAE4E /* BottomTabBarViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		7343B08F2C6A218D00358B25 /* HomeHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderUIView.swift; sourceTree = "<group>"; };
 		73A5AB0F2C5D4E63009BAE4E /* StreamLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */,
+				7343B08F2C6A218D00358B25 /* HomeHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				73A5AB152C5D4E63009BAE4E /* SceneDelegate.swift in Sources */,
 				73A5AB2A2C5D54B7009BAE4E /* UpcomingViewController.swift in Sources */,
 				73A5AB282C5D5464009BAE4E /* HomeViewController.swift in Sources */,
+				7343B0902C6A218D00358B25 /* HomeHeaderUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2JM98ZP8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StreamLand/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -376,6 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2JM98ZP8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StreamLand/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
