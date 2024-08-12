@@ -27,7 +27,7 @@ class HomeHeaderUIView: UIView {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 2
+        button.layer.cornerRadius = 4
         button.tintColor = .black
         
 //        var config = UIButton.Configuration.plain()
@@ -45,11 +45,11 @@ class HomeHeaderUIView: UIView {
         button.setTitle("Download", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .clear
-        button.layer.borderColor = UIColor.white.cgColor
+        button.backgroundColor = .systemGray5
+        button.layer.borderColor = UIColor.systemGray5.cgColor
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 2
+        button.layer.cornerRadius = 4
         button.tintColor = .white
         
 //        var config = UIButton.Configuration.plain()
@@ -91,15 +91,15 @@ class HomeHeaderUIView: UIView {
     
     private func setViewConstraints() {
         NSLayoutConstraint.activate([
-            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 80),
+            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
             playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            playButton.widthAnchor.constraint(equalToConstant: 110),
-            playButton.heightAnchor.constraint(equalToConstant: 35),
+            playButton.widthAnchor.constraint(equalToConstant: 120),
+            playButton.heightAnchor.constraint(equalToConstant: 40),
             
-            downloadButton.leadingAnchor.constraint(equalTo: playButton.trailingAnchor, constant: 20),
+            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
             downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            downloadButton.widthAnchor.constraint(equalToConstant: 110),
-            downloadButton.heightAnchor.constraint(equalToConstant: 35)
+            downloadButton.widthAnchor.constraint(equalToConstant: 120),
+            downloadButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 }
