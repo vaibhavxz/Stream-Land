@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    private let titleHeaders: [String] = ["Trending Movies", "Popular", "Upcoming Movies", "Best of TV", "Top Rated"]
+    private let titleHeaders: [String] = ["Trending Movies", "Best of TV", "Popular", "Upcoming Movies", "Top Rated"]
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
         homeFeedTable.tableHeaderView = headerView
         
         topNavbarConfiguration()
+        
+        getTrendingMovies()
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,6 +51,17 @@ class HomeViewController: UIViewController {
         ]
         
         navigationController?.navigationBar.tintColor = .white
+    }
+    
+    private func getTrendingMovies() {
+        NetworkRequest.sharedNetwork.getTrendingMovies { result in
+            switch result {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -72,7 +85,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-    
+        
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
@@ -86,7 +99,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
         
     }
     

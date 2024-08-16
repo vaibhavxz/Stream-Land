@@ -29,13 +29,6 @@ class HomeHeaderUIView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 4
         button.tintColor = .black
-        
-//        var config = UIButton.Configuration.plain()
-//        config.image = UIImage(systemName: "play.fill")
-//        config.title = "Play"
-//        config.imagePadding = 5
-//        config.baseForegroundColor = .black
-//        button.configuration = config
         return button
     }()
     
@@ -51,13 +44,6 @@ class HomeHeaderUIView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 4
         button.tintColor = .white
-        
-//        var config = UIButton.Configuration.plain()
-//        config.image = UIImage(systemName: "arrow.down")
-//        config.title = "Download"
-//        config.imagePadding = 5
-//        config.baseForegroundColor = .white
-//        button.configuration = config
         return button
     }()
     
@@ -65,7 +51,7 @@ class HomeHeaderUIView: UIView {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
             UIColor.clear.cgColor,
-            UIColor.systemBackground.cgColor
+            UIColor.systemBackground.withAlphaComponent(0.8).cgColor
         ]
         gradientLayer.frame = bounds
         layer.addSublayer(gradientLayer)
