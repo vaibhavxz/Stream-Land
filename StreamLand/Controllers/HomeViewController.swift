@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TrendingMovie = 0
+    case TrendingTv
+    case Popular
+    case Upcoming
+    case TopRated
+}
+
 class HomeViewController: UIViewController {
     
     private let titleHeaders: [String] = ["Trending Movies", "Best of TV", "Popular", "Upcoming Movies", "Top Rated"]
@@ -30,8 +38,6 @@ class HomeViewController: UIViewController {
         homeFeedTable.tableHeaderView = headerView
         
         topNavbarConfiguration()
-        
-        getTrendingMovies()
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,17 +58,7 @@ class HomeViewController: UIViewController {
         
         navigationController?.navigationBar.tintColor = .white
     }
-    
-    private func getTrendingMovies() {
-        NetworkRequest.sharedNetwork.getTrendingMovies { result in
-            switch result {
-            case .success(let movies):
-                print(movies)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -79,6 +75,57 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        
+        switch indexPath.section {
+        case Sections.TrendingMovie.rawValue:
+            NetworkRequest.sharedNetwork.getTrendingMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Sections.TrendingTv.rawValue:
+            NetworkRequest.sharedNetwork.getTrendingTv { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Sections.Popular.rawValue:
+            NetworkRequest.sharedNetwork.getPopularMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Sections.Upcoming.rawValue:
+            NetworkRequest.sharedNetwork.getUpcomingMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Sections.TopRated.rawValue:
+            NetworkRequest.sharedNetwork.getTopRatedMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        default:
+            return UITableViewCell()
+        }
+        
         return cell
     }
     
