@@ -19,8 +19,10 @@
 		730A2A5D2C75F24F0095A80A /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730A2A5C2C75F24F0095A80A /* YoutubeSearchResponse.swift */; };
 		730A2A5F2C75F7B30095A80A /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730A2A5E2C75F7B30095A80A /* TitlePreviewViewController.swift */; };
 		730A2A612C75FA040095A80A /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730A2A602C75FA040095A80A /* TitlePreviewViewModel.swift */; };
+		730A2A872C7854A20095A80A /* StreamLandModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 730A2A852C7854A20095A80A /* StreamLandModel.xcdatamodeld */; };
 		733E9DA72C5FFD870020E153 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */; };
 		7343B0902C6A218D00358B25 /* HomeHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343B08F2C6A218D00358B25 /* HomeHeaderUIView.swift */; };
+		7361952B2C78824800DD8927 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7361952A2C78824800DD8927 /* DataPersistenceManager.swift */; };
 		73A5AB132C5D4E63009BAE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */; };
 		73A5AB152C5D4E63009BAE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */; };
 		73A5AB172C5D4E63009BAE4E /* BottomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5AB162C5D4E63009BAE4E /* BottomTabBarViewController.swift */; };
@@ -43,8 +45,10 @@
 		730A2A5C2C75F24F0095A80A /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 		730A2A5E2C75F7B30095A80A /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		730A2A602C75FA040095A80A /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
+		730A2A862C7854A20095A80A /* StreamLandModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StreamLandModel.xcdatamodel; sourceTree = "<group>"; };
 		733E9DA62C5FFD870020E153 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		7343B08F2C6A218D00358B25 /* HomeHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderUIView.swift; sourceTree = "<group>"; };
+		7361952A2C78824800DD8927 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		73A5AB0F2C5D4E63009BAE4E /* StreamLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				730A2A492C6F95CA0095A80A /* Extensions.swift */,
+				73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */,
+				73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				730A2A452C6F64D60095A80A /* NetworkRequest.swift */,
+				7361952A2C78824800DD8927 /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -162,11 +169,10 @@
 				733E9DA12C5FFD060020E153 /* Views */,
 				733E9DA22C5FFD0C0020E153 /* ViewModels */,
 				73A5AB262C5D5375009BAE4E /* Controllers */,
-				73A5AB122C5D4E63009BAE4E /* AppDelegate.swift */,
-				73A5AB142C5D4E63009BAE4E /* SceneDelegate.swift */,
 				73A5AB1B2C5D4E68009BAE4E /* Assets.xcassets */,
 				73A5AB1D2C5D4E68009BAE4E /* LaunchScreen.storyboard */,
 				73A5AB202C5D4E68009BAE4E /* Info.plist */,
+				730A2A852C7854A20095A80A /* StreamLandModel.xcdatamodeld */,
 			);
 			path = StreamLand;
 			sourceTree = "<group>";
@@ -261,11 +267,13 @@
 				730A2A552C7271E20095A80A /* TitleTableViewCell.swift in Sources */,
 				73A5AB2C2C5D54E8009BAE4E /* SearchViewController.swift in Sources */,
 				730A2A4E2C720E7A0095A80A /* TitleCollectionViewCell.swift in Sources */,
+				7361952B2C78824800DD8927 /* DataPersistenceManager.swift in Sources */,
 				73A5AB172C5D4E63009BAE4E /* BottomTabBarViewController.swift in Sources */,
 				733E9DA72C5FFD870020E153 /* CollectionViewTableViewCell.swift in Sources */,
 				73A5AB2E2C5D551E009BAE4E /* DownloadsViewController.swift in Sources */,
 				730A2A462C6F64D60095A80A /* NetworkRequest.swift in Sources */,
 				73A5AB132C5D4E63009BAE4E /* AppDelegate.swift in Sources */,
+				730A2A872C7854A20095A80A /* StreamLandModel.xcdatamodeld in Sources */,
 				73A5AB152C5D4E63009BAE4E /* SceneDelegate.swift in Sources */,
 				730A2A592C75C6510095A80A /* SearchResultsViewController.swift in Sources */,
 				730A2A4A2C6F95CA0095A80A /* Extensions.swift in Sources */,
@@ -515,6 +523,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		730A2A852C7854A20095A80A /* StreamLandModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				730A2A862C7854A20095A80A /* StreamLandModel.xcdatamodel */,
+			);
+			currentVersion = 730A2A862C7854A20095A80A /* StreamLandModel.xcdatamodel */;
+			path = StreamLandModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 73A5AB072C5D4E63009BAE4E /* Project object */;
 }
